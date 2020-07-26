@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Crete Round', serif;
+        }
+
+        #navbar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 18%;
+            border: solid;
+            border-color: #8e8c8c;
+            height: 100%;
+        }
+
+        #navbar header {
+            height: 20%;
+            padding: 5vmin;
+            font-size: 5vmin;
+            background-color: #343434;
+            color: #FFFFFF;
+        }
+
+        #navbar ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar li {
+            padding: 2vmin 2vmin;
+            font-size: 2.5vmin;
+            border-bottom: 1px solid;
+            border-color: #8e8c8c;
+            height: 6vmin;
+            background-color: #f0f0f0;
+            vertical-align: middle;
+        }
+
+        li a {
+            text-decoration: none;
+        }
+
+        #main-doc {
+            margin: 2% 2% 2% 20%;
+        }
+
+        .main-section header {
+            background-color: #f0f0f0;
+            padding: 1% 2%;
+            margin-top: 6%;
+            font-size: 3vmin;
+        }
+
+        .main-section p, section ul {
+            padding: 0.5% 2%;
+            font-size: 2vmin;
+        }
+
+        section ul {
+            padding-left: 4%
+        }
+
+        p code {
+            display: block;
+            width: 50%;
+            padding: 1% 2%;
+            font-size: 2vmin;
+            background-color: #111171;
+            color: #FFFFFF;
+        }
+
+        @media(max-width: 680px) {
+            #navbar header {
+                font-size: 4vmin;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <nav id="navbar">
+        <header>Loops and Breaks in C++:</header>
+        <ul type="none">
+            <li style="border-top: 1px solid; border-color: #8e8c8c;">
+                <a href="#introduction" class="nav-link">Introduction</a>
+            </li>
+            <li>
+                <a href="#the_for-loop" class="nav-link">The For-Loop</a>
+            </li>
+            <li>
+                <a href="#the_while-loop" class="nav-link">The While-Loop</a>
+            </li>
+            <li>
+                <a href="#the_do-while_loop" class="nav-link">The Do-While Loop</a>
+            </li>
+            <li>
+                <a href="#the_break_command" class="nav-link">The Break Command</a>
+            </li>
+            <li>
+                <a href="#the_continue_command" class="nav-link">The Continue Command</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header style="margin-top: 2%;">Introduction</header>
+            <p>This page describes the usage of five of the most important topics of the C++ language, namely, for-loop, while-loop, do-while loop, break command, and continue command.</p>
+        </section>
+        <section class="main-section" id="the_for-loop">
+            <header>The For-Loop</header>
+            <p>For-loop is used when statement(s) is/are required to be iterated an exact number of times.<br>Here is an example code:</p>
+            <p><code>for(int i=1 ; i<=10 ; i++) {<br>&nbsp;&nbsp;&nbsp; cout << i;<br>}</code></p>
+            <ul type="square">
+                <li>It can be used without curly braces ( { } ) if it contains only one statement.</li>
+                <li>It can be used with curly braces ( { } ) if it contains at least one statement.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="the_while-loop">
+            <header>The While-Loop</header>
+            <p>While-loop is used when the number of required iterations is unknown and is based on a certain condition.<br>Here is an example code:</p>
+            <p><code>int i=10;<br>while(i*i<1000) {<br>&nbsp;&nbsp;&nbsp; cout << i;<br>&nbsp;&nbsp;&nbsp; i += 2;<br>}</code></p>
+            <ul type="square">
+                <li>The statements within the loop get executed as long as the specified condition remains <em>true</em>.</li>
+                <li>Here, the condition is checked prior to the execution of the loop statements.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="the_do-while_loop">
+            <header>The Do-While Loop</header>
+            <p>While-loop is used when the number of required iterations is unknown and is based on a certain condition.<br>Here is an example code:</p>
+            <p><code>int i=10;<br>do {<br>&nbsp;&nbsp;&nbsp; cout << i;<br>&nbsp;&nbsp;&nbsp; i += 2;<br>}while(i*i<1000)</code></p>
+            <ul type="square">
+                <li>The statements within the loop get executed as long as the specified condition remains <em>true</em>.</li>
+                <li>Here, the loop statements are executed prior to the condition check.</li>
+            </ul>
+            </section>
+        <section class="main-section" id="the_break_command">
+            <header>The Break Command</header>
+            <p>The <em>break</em> statement gives us the legacy to "break out" of a loop as soon as the execution reaches a certain point in the loop (usually, a condition). Here is an example code:</p>
+            <p><code>for(int i=1 ; i ; i++) {<br>&nbsp;&nbsp;&nbsp; cout << i;<br>&nbsp;&nbsp;&nbsp; if(i==25) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</code></p>
+            <ul type="square">
+                <li>This command lets the execution <strong>break out of only a single loop.</strong></li>
+                <li>It is often used when there is no governing loop condition.</li>
+            </ul>
+            </section>
+        <section class="main-section" id="the_continue_command">
+            <header>The Continue Command</header>
+            <p>The <em>continue</em> statement gives us the legacy to return the execution in a loop to the beginning of the loop. Here is an example code:</p>
+            <p><code>for(int i=1 ; i<=10 ; i++) {<br>&nbsp;&nbsp;&nbsp; if(i%2==0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; continue;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;cout << i;<br>}</code></p>
+            <ul type="square">
+                    <li>This command shifts the control to the beginning to the loop (starting the next iteration).</li>
+                    <li>It is often used when the execution of the loop statement(s) for some of the values of the loop variable is to be skipped.</li>
+            </ul>
+            </section>
+    </main>
+
+</body>
+</html>
